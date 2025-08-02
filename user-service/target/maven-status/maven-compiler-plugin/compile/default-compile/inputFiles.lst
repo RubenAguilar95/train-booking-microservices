@@ -1,0 +1,8 @@
+C:\Users\Ruben\eclipse-upwork-workspace\train-booking-microservices\user-service\src\main\java\com\example\userservice\controller\UserController.java
+C:\Users\Ruben\eclipse-upwork-workspace\train-booking-microservices\user-service\src\main\java\com\example\userservice\model\User.java
+C:\Users\Ruben\eclipse-upwork-workspace\train-booking-microservices\user-service\src\main\java\com\example\userservice\repository\UserRepository.java
+C:\Users\Ruben\eclipse-upwork-workspace\train-booking-microservices\user-service\src\main\java\com\example\userservice\security\JwtAuthFilter.java
+C:\Users\Ruben\eclipse-upwork-workspace\train-booking-microservices\user-service\src\main\java\com\example\userservice\security\JwtUtil.java
+C:\Users\Ruben\eclipse-upwork-workspace\train-booking-microservices\user-service\src\main\java\com\example\userservice\security\SecurityConfig.java
+C:\Users\Ruben\eclipse-upwork-workspace\train-booking-microservices\user-service\src\main\java\com\example\userservice\service\UserDetailsServiceImpl.java
+C:\Users\Ruben\eclipse-upwork-workspace\train-booking-microservices\user-service\src\main\java\com\example\userservice\UserServiceApplication.java
