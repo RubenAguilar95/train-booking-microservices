@@ -1,3 +1,14 @@
+# Java 
+**/target/
+
+# IDE
+*.iml
+.idea/
+.vscode/
+.classpath
+.project
+.settings/
+
 # Logs
 logs
 *.log

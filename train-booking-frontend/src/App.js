@@ -104,12 +104,26 @@ function Tickets() {
     api.get("/tickets").then((res) => setTickets(res.data));
   }, []);
 
+  const processPayment = async (trainId) => {
+    try {
+      await api.post("/payments/charge", {
+        amount: 2000, // cents
+        source: "tok_visa", // token
+        description: `Booking for train ${trainId}`,
+      });
+      alert("Payment processed successfully");
+    } catch (e) {
+      alert("Payment failed: " + e.response.data);
+    }
+  };
+
   return (
     <div>
       <h2>Your Tickets</h2>
       {tickets.map((t) => (
         <div key={t.id}>
           Train: {t.trainId} - Seat No: {t.seatNumber} - Status: {t.status}
+          <button onClick={() => processPayment(t.id)}>Pay</button>
         </div>
       ))}
     </div>

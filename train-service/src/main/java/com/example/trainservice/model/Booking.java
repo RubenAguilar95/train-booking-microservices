@@ -1,11 +1,15 @@
 package com.example.trainservice.model;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="bookings",
   uniqueConstraints = {@UniqueConstraint(columnNames = {"train_id", "seat_number"})})
-public class Booking {
+public class Booking implements Serializable {
+
+  private static final long serialVersionUID = 1L;
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)

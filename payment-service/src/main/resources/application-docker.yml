@@ -15,7 +15,7 @@ spring:
     name: payment-service
   profiles: docker
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:9092
     consumer:
       group-id: payment-service-group
       auto-offset-reset: earliest

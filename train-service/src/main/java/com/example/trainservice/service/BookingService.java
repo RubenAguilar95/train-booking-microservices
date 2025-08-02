@@ -4,6 +4,7 @@ import com.example.trainservice.model.Booking;
 import com.example.trainservice.model.Train;
 import com.example.trainservice.repository.BookingRepository;
 import com.example.trainservice.repository.TrainRepository;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -60,8 +61,8 @@ public class BookingService {
       booking = bookingRepository.save(booking);
 
       // Publish Kafka event
-      String bookingEventMsg = "User " + userId + " booked seat " + booking.getSeatNumber() +
-                                " on train " + trainId;
+      ObjectMapper mapper = new ObjectMapper();
+      String bookingEventMsg = mapper.writeValueAsString(booking);
       kafkaTemplate.send(BOOKING_TOPIC, bookingEventMsg);
 
       return booking;

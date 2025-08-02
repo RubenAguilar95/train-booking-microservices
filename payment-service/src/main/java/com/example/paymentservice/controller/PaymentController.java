@@ -20,6 +20,7 @@ public class PaymentController {
 
   @PostMapping("/charge")
   public ResponseEntity<?> charge(@RequestBody Map<String, Object> chargeRequest) {
+    System.out.println("Processing payment: " + chargeRequest);
     Stripe.apiKey = stripeApiKey;
 
     try {
